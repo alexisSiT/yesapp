@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yes_no_app/presentation/widgets/chat/her_message_bubble.dart';
 import 'package:yes_no_app/presentation/widgets/chat/my_message_bubble.dart';
+import 'package:yes_no_app/presentation/widgets/shared/message_field_box.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -16,7 +17,7 @@ class ChatScreen extends StatelessWidget {
                 "https://pbs.twimg.com/profile_images/767081941858390016/weLyNLTn_400x400.jpg"),
           ),
         ),
-        title: const Text('Chat xd'),
+        title: const Text('Sheldon Cooper'),
         centerTitle: false,
       ),
       body: _ChatView(),
@@ -41,7 +42,9 @@ class _ChatView extends StatelessWidget {
                   : const MyMessageBubble();
               },
             )),
-            const Text('Mundo')
+            
+            // Caja de texto
+            const MessageFieldBox(),
           ],
         ),
       ),
